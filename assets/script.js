@@ -43,22 +43,30 @@ sugarPlusBtn.addEventListener('click', function() {
 
 
 gbMinusBtn.addEventListener('click', function() {
+    if (gb >= 1){
     gb = gb - 1
     document.querySelector('#qty-gb').textContent = gb
     total = gb + cc + sugar
     document.querySelector('#qty-total').textContent = total
+    }
+    else {console.log('error')}
 })
 ccMinusBtn.addEventListener('click', function() {
+    if (cc >= 1){
     cc = cc - 1
     document.querySelector('#qty-cc').textContent = cc
     total = gb + cc + sugar
     document.querySelector('#qty-total').textContent = total
+    } 
+    else {console.log('error')}
 })
 sugarMinusBtn.addEventListener('click', function() {
+    if (sugar >= 1){
     sugar = sugar - 1
     document.querySelector('#qty-sugar').textContent = sugar
     total = gb + cc + sugar
     document.querySelector('#qty-total').textContent = total
+    }
+    else {console.log('error')}
 })
-
 
